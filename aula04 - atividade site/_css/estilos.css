@@ -15,12 +15,6 @@ body{
     text-align: center;
 }
 
-.rodape p{
-    font-size: 14px;
-    padding: 10px;
-    text-align: center;
-}
-
 .topnav{
     background-color: #333333;
     padding: 15px;
@@ -112,4 +106,16 @@ body{
 
 .linha {
     color: #000000;
+}
+
+.botao img {
+    display: block;
+    width: 200px;
+    margin: 20px auto 20px auto;
+}
+
+.rodape p{
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
 }
