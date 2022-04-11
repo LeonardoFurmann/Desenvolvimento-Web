@@ -1,0 +1,53 @@
+.container{
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    /* column-gap: 10px;
+    row-gap: 20px;  */
+    gap: 10px;
+    grid-template-areas: "i1 i1 i2" "i3 i4 i4" "i3 i5 i6";
+    
+}
+
+.itens{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.item-1{
+    /* grid-column: 1/ span 2;
+    grid-row: 1/ span 2; 
+    
+    grid-area: 1 / 1 / 2 / 3;
+    */
+
+    grid-area: i1;
+    background-color: greenyellow;
+    
+}
+
+.item-2{
+    grid-area: i2;
+    background-color: burlywood;
+}
+
+.item-3{
+    grid-area: i3;
+    background-color: rgb(15, 137, 194);
+}
+
+.item-4{
+    grid-area: i4;
+    background-color: pink;
+}
+
+.item-5{
+    grid-area: i5;
+    background-color: green;
+}
+
+.item-6{
+    grid-area: i6;
+    background-color: orange;
+}
+

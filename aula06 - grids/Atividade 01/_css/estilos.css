@@ -1,0 +1,38 @@
+.container{
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    gap: 10px;
+    /* grid-template-areas: "i1 i1 i1 i1" 
+    "i2 i3 i3 i3" "i2 i3 i3 i3" "i4 i4 i4 i4"; */    
+}
+
+p{
+    line-height: 1.5;
+}
+
+.itens{
+    border-radius: 5px;
+}
+
+.cabecalho, .rodape{
+    padding: 20px;
+    grid-column: 1/5;
+    /* height: 40px; */
+    background-color: rgb(71, 146, 189); 
+    font-size: 10px;   
+}
+
+.outros{
+    grid-column: 1/2;
+    height: 400px;
+    padding: 20px;
+    border-right: 1px solid black;
+}
+
+.conteudo{
+    grid-column: 2/5;
+    padding: 20px;
+}
+
+
+
