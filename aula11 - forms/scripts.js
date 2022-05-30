@@ -14,17 +14,23 @@ function ex_03(){
     document.getElementById("info").innerText = `Restam ${resto} caracteres.`
 }
 
-function form(){
+function formulario(){
     var nome = document.getElementById("nome").value;
+    
     var sobrenome = document.getElementById("sobrenome").value;
+
+
     if(document.getElementById("feminino").checked){
         var genero = "feminino";
     }
     if(document.getElementById("masculino").checked){
         var genero = "masculino";
     }
-    
-    var genero = document.getElementById("").value;
-    var nome = document.getElementById("nome").value;
-    var nome = document.getElementById("nome").value;
+
+    if(document.getElementById("senha").value == document.getElementById("confir_senha").value){
+        document.getElementById("info").innerText = `Nome: ${nome} ${sobrenome} \n Genero: ${genero}`;
+    } else {
+        window.alert("Senha incorreta");
+    }
+
 }

@@ -9,34 +9,36 @@
 </head>
 <body>
     
+    
     <label for="nome">Nome: </label> <br>
-    <input type="name" id="nome" autofocus> <br>
+    <input type="text" name="nome" id="nome" autofocus> <br>
 
     <label for="sobrenome">Sobrenome</label> <br>
-    <input type="name" id="sobrenome"> <br>
+    <input type="text" name="sobrenome" id="sobrenome"> <br>
     
     <p>Gênero</p> 
     <label for="feminino">Feminino: </label> 
-    <input type="radio" id="feminino" value="1"> <br>
+    <input type="radio" name="genero" id="feminino" value="1"> <br>
     <label for="masculino">Masculino: </label>  
-    <input type="radio" id="masculino" value="2"> <br>
+    <input type="radio" name="genero" id="masculino" value="2"> <br>
    
-    <label for="estado">Estado de origem: </label> 
+    <!-- <label for="estado">Estado de origem: </label> 
     <select name="estado" id="estado"> <br>
         <option value="pr">Paraná</option>
         <option value="sc">Santa Catarina</option>
         <option value="rs">Rio Grande do Sul</option>
         <option value="sp">São Paulo</option>
         <option value="rj">Rio de Janeiro</option> 
-    </select> <br>
+    </select> <br> -->
     
     <label for="senha">Senha: </label> 
-    <input type="password" id="senha"> <br>
+    <input type="password" name="senha" id="senha"> <br>
 
     <label for="confir_senha">Confirmar Senha: </label> 
-    <input type="password" id="confir_senha"> <br>
+    <input type="password" name="confir_senha" id="confir_senha"> <br>
 
-    <button onclick="form()">Enviar</button>
+    <button onclick="formulario()">Enviar</button>
+    <p id="info"></p>
    
 </body>
 </html>
