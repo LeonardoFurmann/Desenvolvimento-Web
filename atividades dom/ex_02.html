@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <p>Um simples paragráfo</p>
+    <button onclick="ex_02()">Mudar a cor</button>
+
+    <script>
+        function ex_02(){
+            
+            var cor = window.prompt("Informe uma cor: ");
+
+            switch(cor){
+                case 'azul': 
+                    document.getElementsByTagName("p")[0].style.color = "blue";
+                break;
+                case 'vermelho': 
+                    document.getElementsByTagName("p")[0].style.color = "red";
+                break;
+                case 'amarelo': 
+                    document.getElementsByTagName("p")[0].style.color = "yellow";
+                break;
+                case 'laranja': 
+                    document.getElementsByTagName("p")[0].style.color = "orange";
+                break;
+                default:
+                    window.alert("Cor inacesível");
+            }
+            
+        }
+    </script>
+</body>
+</html>

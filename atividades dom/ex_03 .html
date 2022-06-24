@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <p>Um simples parágrafo</p>
+
+    <label for="vermelho">Vermelho: </label>
+    <input type="radio" name="cor" id="vermelho" value="0">
+
+    <label for="azul">Azul: </label>
+    <input type="radio" name="cor" id="azul" value="1">
+
+    <label for="amarelo">Amarelo: </label>
+    <input type="radio" name="cor" id="amarelo" value="2">
+
+    <button onclick="ex_03()">Mudar a cor</button>
+
+    <script>
+        function ex_03(){
+            
+            var nodes = document.getElementsByName("cor");
+        
+
+            for(var i = 0; i< nodes.length; i++){
+                    if(nodes[0].checked){
+                        document.getElementsByTagName("p")[0].style.color = "red";
+                    } else if(nodes[1].checked){
+                        document.getElementsByTagName("p")[0].style.color = "blue";
+                     } else if(nodes[2].checked){
+                        document.getElementsByTagName("p")[0].style.color = "yellow";
+                    }
+                }    
+            }
+            
+    </script>
+</body>
+</html> 

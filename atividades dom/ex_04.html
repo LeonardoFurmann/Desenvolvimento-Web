@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <label for="caixa"></label>
+    <input type="textarea" name="caixa" id="caixa">
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="destacar()">Destacar</button>
+    <button onclick="remover()">Remover</button>
+    <p>Lista: </p>
+    <ul></ul>
+
+    <script>
+        function adicionar(){
+            var elemento = document.createElement("li");
+            var texto = document.createTextNode(document.getElementById("caixa").value);
+            elemento.appendChild(texto);
+
+            var elemento_pai = document.getElementsByTagName("ul")[0];
+
+            elemento_pai.appendChild(elemento);
+        }
+
+        function destacar(){
+            var texto = document.getElementById("caixa").value;
+            var nodes = document.getElementsByTagName("li");
+
+            for (var i = 0; i < nodes.length; i++){
+                if(nodes[i] == texto){
+                    document.getElementsByTagName("li")[i].style.color = "red";
+                }
+            }     
+        }
+    </script>
+
+</body>
+</html>
