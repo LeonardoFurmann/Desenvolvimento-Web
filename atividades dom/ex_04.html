@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 
     <label for="caixa"></label>
-    <input type="textarea" name="caixa" id="caixa">
+    <input type="text" name="caixa" id="caixa">
     <button onclick="adicionar()">Adicionar</button>
     <button onclick="destacar()">Destacar</button>
     <button onclick="remover()">Remover</button>
     <p>Lista: </p>
-    <ul></ul>
+    <ul id="lista"></ul>
 
     <script>
-        function adicionar(){
+        function adicionar() {
             var elemento = document.createElement("li");
             var texto = document.createTextNode(document.getElementById("caixa").value);
             elemento.appendChild(texto);
@@ -28,17 +30,26 @@
             elemento_pai.appendChild(elemento);
         }
 
-        function destacar(){
-            var texto = document.getElementById("caixa").value;
-            var nodes = document.getElementsByTagName("li");
+        function destacar() {
 
-            for (var i = 0; i < nodes.length; i++){
-                if(nodes[i] == texto){
-                    document.getElementsByTagName("li")[i].style.color = "red";
-                }
-            }     
-        }
+            const values = document.getElementById("lista").children;
+            var texto = document.getElementById("caixa").value;
+            
+
+            for (let i = 0; i < values.length; i++) {
+                var verif = values[i].localeCompare(texto);
+                
+                if (verif == 0) {
+                    values[i].style.color = "red";
+                } else {}   
+            }
+
+
+            // var elemento_pai = document.getElementsByTagName("ul")[0];
+
+        }       
     </script>
 
 </body>
+
 </html>

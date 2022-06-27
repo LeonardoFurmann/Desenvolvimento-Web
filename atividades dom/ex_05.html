@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<body>
+    <select name="lista" id="lista">
+        <option value="Curitiba">Curitiba</option>
+        <option value="São Paulo">São Paulo</option>
+        <option value="Natal">Natal</option>
+    </select>
+
+    <div>
+        <label for="cidade">Adicione uma cidade a lista</label>
+        <input type="text" name="cidade" id="cidade">
+        <button onclick="ex_05()">Adicionar</button>
+    </div>
+
+    <script>
+        function ex_05() {
+            var elemento = document.createElement("option");
+            var texto = document.createTextNode(document.getElementById("cidade").value);
+            elemento.appendChild(texto);
+            var elemento_pai = document.getElementsByTagName("select")[0];
+            elemento_pai.appendChild(elemento);
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
